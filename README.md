@@ -7,4 +7,4 @@ Integrantes:
 * Vitor Liu
 
 Proposta:
-Utilizar o IMU Razor para controlar, como um volante, o movimento do Turtlebot Burger
+Por python, criar uma evolução de modelos de carros simples em 3D
