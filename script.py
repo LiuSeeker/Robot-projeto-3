@@ -1,7 +1,6 @@
 from xml.etree.ElementTree import parse, Element, SubElement, Comment, tostring, ElementTree
 from random import randint, uniform, choice
 
-
 class Link:
 	def __init__(self, nome, tipo, dimensoes):
 		self.nome = nome
@@ -79,8 +78,6 @@ class Joint:
 
 
 def cria_urdf():
-	global dic_links
-	global dic_joints
 	dic_joints = {}
 	#n_pneus = randint(3,6)
 	n_pecas = randint(2,5)
@@ -297,11 +294,15 @@ def cria_urdf():
 
 		###################
 
-	return root
+	return root, dic_links, dic_joints
+
+#a = cria_urdf()
 
 
 def escreve_urdf():
-	tree = ElementTree(cria_urdf())
+	tree = ElementTree(cria_urdf()[0])
 	tree.write("oba.urdf")
 
-#print(dic_links, dic_joints)
+obaoba = cria_urdf()
+
+print(obaoba[1], obaoba[2])
