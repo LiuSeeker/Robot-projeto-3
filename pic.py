@@ -7,7 +7,8 @@ p.connect(p.GUI)
 p.setRealTimeSimulation(1)
 
 
-for i in range(5):
+
+while True:
 	escreve_urdf()
 	print("-----------------------------------------------------------------------------------------------------------")
 	p.resetSimulation()
@@ -15,21 +16,19 @@ for i in range(5):
 
 	p.createCollisionShape(p.GEOM_PLANE)
 	p.createMultiBody(0,0)
+	timme = time.time()
 
 	obj = p.loadURDF("oba.urdf")
 	dist = 0
-	while(dist < 5):
 
-		for j in range(p.getNumJoints(obj)):
-			maxVel = randint(5,30)
-			maxForce = randint(10, 500)
+	for j in range(p.getNumJoints(obj)):
+		maxVel = randint(5,30)
+		maxForce = randint(100, 400)
+
+	while(time.time() <= timme + 5):
 			p.setJointMotorControl2(obj, j, p.VELOCITY_CONTROL,targetVelocity=maxVel,force=maxForce)
-			
-
 			pos = p.getLinkState(obj,j)[0]
 			dist = (pos[0]**2 + pos[1]**2)**0.5
-			if dist >= 5:
-				break
-		p.stepSimulation()
-		time.sleep(0.01)
+	p.stepSimulation()
+	time.sleep(0.01)
 p.disconnect()

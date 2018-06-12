@@ -280,9 +280,9 @@ def cria_urdf():
 					dic_links[i].peca_mz = False
 					loop_lado = False
 
-		joint_types = ["fixed", "continuous", "continuous"]
+		joint_types = ["fixed", "continuous", "continuous", "continuous", "continuous", "continuous", "continuous"]
 
-		rand_type = choice(joint_types)
+		rand_type = joint_types[randint(0, len(joint_types)-1)]
 
 		joint = SubElement(root, "joint", {'name': nome_joint, 'type': rand_type})
 		origin_j = SubElement(joint, "origin", {'xyz': ' '.join(size_list_j)})
