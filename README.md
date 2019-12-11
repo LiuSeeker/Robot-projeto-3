@@ -5,7 +5,7 @@
 
 (PT-BR)
 
-### Projeto 3 - Projeto livre de sistema robótico
+### Projeto 3 - Evolução de corpos 3D articulados gerados aleatoriamente
 
 Como projeto de um sistema robótico, foi escolhido pelo grupo desenvolver uma evolução de corpos 3D articulados gerados aleatoriamente. A evolução é feita baseada na distância percorrida da origem. O programa é escrito em python.
 
@@ -22,7 +22,7 @@ Devido ao tempo restrito, foi desenvolvido até a geração aleatória dos corpo
 
 (EN-US)
 
-### Project 3 - Free project of a robotic system
+### Project 3 - Evolution of randomly generated articulated 3D bodies
 
 As a project for a robotic system, it was chosen by the group to develop an evolution of randomly generated 3D articulated bodies. The evolution is made based on the distance travaled from the origin. The program is written in Python.
 
