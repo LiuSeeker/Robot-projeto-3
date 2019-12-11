@@ -28,7 +28,7 @@ As a project for a robotic system, it was chosen by the group to develop an evol
 
 The `script.py` file has the functions that generates the Links and Joints of the robot; and the `pic.py` file uses these functions to create the robot and simulate its movement. The `Apresentacao.pptx` file has the slides showing the project and presenting the results (only in portuguese).
 
-Due to the restrict deadline, the program was developed until the random generation of the bodies and the simulation of movement. Therefor, there is no evolution.
+Due to the restrict deadline, the program was developed until the random generation of the bodies and the simulation of movement. Therefore, there is no evolution.
 
 **Dependencies**:
 - pybullet
